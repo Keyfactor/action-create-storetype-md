@@ -1,0 +1,26 @@
+{
+  "name": "action-create-storetype-md",
+  "version": "1.0.0",
+  "description": "Create Markdown Stub from manifest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js",
+    "precommit": "npm run build && git add dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keyfactor/action-create-storetype-md.git"
+  },
+  "keywords": [],
+  "author": "mikey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keyfactor/action-create-storetype-md/issues"
+  },
+  "homepage": "https://github.com/Keyfactor/action-create-storetype-md#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}

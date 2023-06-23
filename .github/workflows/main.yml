@@ -1,0 +1,17 @@
+name: Create Markdown Stub from manifest
+on: [push]
+
+jobs:
+  create_stub:
+    runs-on: ubuntu-latest
+    name: A test job to create a manifest
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Create markdown stub
+        uses: ./ # Uses an action in the root directory
+        id: create
+
+

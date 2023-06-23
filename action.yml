@@ -1,0 +1,13 @@
+name: 'Create Store Types Stub Markdown'
+description: 'Create the readme markdown stub from the integration manifest for Store Type definitions'
+inputs:
+  input-file:  # new json data
+    description: 'Integration Manifest with store_types definition'
+    required: true
+    default: 'integration-manifest.json'
+outputs:
+  time: 
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
