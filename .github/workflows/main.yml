@@ -13,5 +13,8 @@ jobs:
       - name: Create markdown stub
         uses: ./ # Uses an action in the root directory
         id: create
-
+      - name: Display stub
+        id: display
+        run: |
+            cat store-types-tables.md
 
