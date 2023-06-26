@@ -1,6 +1,6 @@
-# Merge json files
+# Create Cert store_type Readme stub
 
-This action is designed to merge 2 json files together. Intended to be used for Keyfactor store_types definitionsinpu
+This action will create a new stub files using the integration-manifest.json properties for each store_type defined. This table will be included in the final readme generation
 
 ## Inputs
 
@@ -17,7 +17,7 @@ For debugging purposes
 ## Example usage
 
 ```yaml
-uses: keyfactor/action-create-storetype@v1.0
+uses: keyfactor/action-create-storetype-md@v1.0.0
 with:
 	input-file: integ-store-types.json
 	
