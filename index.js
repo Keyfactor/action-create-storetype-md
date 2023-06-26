@@ -6,7 +6,8 @@
 const fs = require('fs');
 const core = require('@actions/core');
 
-const JSONFILE = process.env.JSONFILE
+const JSONFILE = process.env.JSONFILE // integration-manifest.json
+const STUBFILE = process.env.STUBFILE // readme-src/store-types-tables.md
 
 const checked = 'Checked [x]'
 const unchecked = 'Unchecked [ ]'
@@ -14,6 +15,7 @@ const unchecked = 'Unchecked [ ]'
 function buildStoreTypesMD() {
   try {
     const inputFile = core.getInput('input-file') || JSONFILE
+    const outputFile = core.getInput('output-file') || STUBFILE
     const newdata = JSON.parse(fs.readFileSync(inputFile))
     var keys = newdata.about.orchestrator.store_types;
     var markdown = '';
@@ -84,11 +86,11 @@ kfutil store - types create--name ${storeTypeName}
 `
     }
 //    console.log(markdown);
-    fs.writeFile('store-types-tables.md', markdown, (err) => {
+    fs.writeFile(outputFile, markdown, (err) => {
       if (err)
         console.log(err);
       else {
-        console.log("File written successfully\n");
+        console.log(`File written successfully: ${outputFile}`);
       }
     });
   }

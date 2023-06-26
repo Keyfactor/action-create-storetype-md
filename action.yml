@@ -3,8 +3,12 @@ description: 'Create the readme markdown stub from the integration manifest for 
 inputs:
   input-file:  # new json data
     description: 'Integration Manifest with store_types definition'
-    required: true
+    required: false
     default: 'integration-manifest.json'
+  output-file:  # stub file
+    description: 'Stub file in readme-src folder. It will be created if it does not exist'
+    required: false
+    default: 'readme-src/store-types-tables.md'
 outputs:
   time: 
     description: 'The time we greeted you'
