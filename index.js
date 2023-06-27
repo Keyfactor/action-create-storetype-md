@@ -64,7 +64,7 @@ kfutil store - types create--name ${storeTypeName}
 | Requires Store Password |          | ${StoreRequired}                          |
 | Supports Entry Password |          | ${EntrySupported}                         |
       
-![k8sstlssecr_basic.png](docs%2Fscreenshots%2Fstore_types%2F${stn}_basic.png)
+![${stn}_basic.png](docs%2Fscreenshots%2Fstore_types%2F${stn}_basic.png)
 
 ##### UI Advanced Tab
 | Field Name            | Required | Value                 |
@@ -74,7 +74,7 @@ kfutil store - types create--name ${storeTypeName}
 | Private Key Handling  |          | ${PrivateKeyAllowed}  |
 | PFX Password Style    |          | ${PFXPasswordStyle}   |
 
-![k8sstlssecr_advanced.png](docs%2Fscreenshots%2Fstore_types%2F${stn}_advanced.png)
+![${stn}_advanced.png](docs%2Fscreenshots%2Fstore_types%2F${stn}_advanced.png)
 
 ##### UI Custom Fields Tab
 | Name           | Display Name         | Type   | Required | Default Value |
